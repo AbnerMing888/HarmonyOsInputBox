@@ -2,7 +2,6 @@
 
 InputBox是一个自动输入框，支持文本、密码等多种模式，支持动态切换下一个，适用于验证码，密码等动态切换下一个等场景。
 
-
 ## 开发环境
 
 DevEco Studio NEXT Developer Beta1,Build Version: 5.0.3.900
@@ -20,9 +19,7 @@ modelVersion：5.0.0
 
 ## 快速使用
 
-有多种使用方式，比如远程依赖、本地静态共享包依赖,源码方式依赖，推荐使用**远程依赖**，方便快捷，有最新修改可以及时生效。
-
-### 1、远程依赖方式使用【推荐】
+### 远程依赖方式使用【推荐】
 
 方式一：在Terminal窗口中，执行如下命令安装三方包，DevEco Studio会自动在工程的oh-package.json5中自动添加三方包依赖。
 
@@ -35,12 +32,12 @@ ohpm install @abner/input_box
 方式二：在工程的oh-package.json5中设置三方包依赖，配置示例如下：
 
 ```
-"dependencies": { "@abner/input_box": "^1.0.0"}
+"dependencies": { "@abner/input_box": "^1.0.1"}
 ```
 
 ## 代码使用
 
-### 1、普通使用 
+### 1、普通使用
 
 
 ```typescript
@@ -224,37 +221,40 @@ InputBoxView({
 ## 属性介绍
 
 
-| 属性                        | 类型                                    | 概述                       |
-|---------------------------|---------------------------------------|--------------------------|
-| inputBoxSize              | number                                | 输入框数量，默认为6个              |
-| inputBoxWidth             | Length                                | 每个输入框的宽度，默认为100%         |
-| inputBoxHeight            | Length                                | 每个输入框的高度，默认为100%         |
-| inputBoxBgColor           | ResourceColor                         | 输入框的背景                   |
-| inputType                 | InputType                             | 键盘类型，默认为InputType.Number |
-| inputBoxGap               | Length                                | 输入框之间的间隙，默认为10           |
-| inputWidth                | Length                                | 输入框整体的宽度                 |
-| inputHeight               | Length                                | 输入框整体的高度                 |
-| inputBoxBorderRadius      | Length                                | 圆角                       |
-| inputBoxBorderWidth       | EdgeWidths/Length/LocalizedEdgeWidths | 边框大小                     |
-| inputBoxNormalBorderColor | ResourceColor                         | 输入框选中边框背景                |
-| inputBoxSelectBorderColor | ResourceColor                         | 输入框未选中边框背景               |
-| inputMarginLeft           | Length                                | 输入框整体距离左边的距离             |
-| inputMarginRight          | Length                                | 输入框整体距离右边的距离             |
-| caretColor                | ResourceColor                         | 光标颜色                     |
-| boxCaretWidth             | Length                                | 光标宽度                     |
-| inputFontColor            | ResourceColor                         | 字体颜色                     |
-| inputFontSize             | Length                                | 字体大小                     |
-| inputFontWeight           | umber/FontWeight/string               | 字体权重                     |
-| inputFontStyle            | FontStyle                             | 字体样式                     |
-| fontFamily                | ResourceStr                           | 字体列表                     |
-| openRowClick              | boolean                               | 是否打开行点击                  |
-| inputTextType             | InputTextType                         | 显示内容类型                   |
-| boxInputHideBgColor       | boolean                               | 最后的一个背景是否隐藏，默认不隐藏        |
-| isShowBottomCaret         | boolean                               | 光标是否显示底部，默认不展示           |
-| isInputBoxBorder          | boolean                               | 是否是边框，默认不是               |
-| onChange                  | (value: string) => void               | 输入回调监听                   |
-| onInputEnd                | (value: string) => void               | 输入结束                     |
 
+| 属性                          | 类型                                    | 概述                       |
+|-----------------------------|---------------------------------------|--------------------------|
+| inputBoxSize                | number                                | 输入框数量，默认为6个              |
+| inputBoxWidth               | Length                                | 每个输入框的宽度，默认为100%         |
+| inputBoxHeight              | Length                                | 每个输入框的高度，默认为100%         |
+| inputBoxBgColor             | ResourceColor                         | 输入框的背景                   |
+| inputType                   | InputType                             | 键盘类型，默认为InputType.Number |
+| inputBoxGap                 | Length                                | 输入框之间的间隙，默认为10           |
+| inputWidth                  | Length                                | 输入框整体的宽度                 |
+| inputHeight                 | Length                                | 输入框整体的高度                 |
+| inputBoxBorderRadius        | Length                                | 圆角                       |
+| inputBoxBorderWidth         | EdgeWidths/Length/LocalizedEdgeWidths | 边框大小                     |
+| inputBoxNormalBorderColor   | ResourceColor                         | 输入框选中边框背景                |
+| inputBoxSelectBorderColor   | ResourceColor                         | 输入框未选中边框背景               |
+| inputMarginLeft             | Length                                | 输入框整体距离左边的距离             |
+| inputMarginRight            | Length                                | 输入框整体距离右边的距离             |
+| caretColor                  | ResourceColor                         | 光标颜色                     |
+| boxCaretWidth               | Length                                | 光标宽度                     |
+| inputFontColor              | ResourceColor                         | 字体颜色                     |
+| inputFontSize               | Length                                | 字体大小                     |
+| inputFontWeight             | umber/FontWeight/string               | 字体权重                     |
+| inputFontStyle              | FontStyle                             | 字体样式                     |
+| fontFamily                  | ResourceStr                           | 字体列表                     |
+| openRowClick                | boolean                               | 是否打开行点击                  |
+| inputTextType               | InputTextType                         | 显示内容类型                   |
+| boxInputHideBgColor         | boolean                               | 最后的一个背景是否隐藏，默认不隐藏        |
+| isShowBottomCaret           | boolean                               | 光标是否显示底部，默认不展示           |
+| isInputBoxBorder            | boolean                               | 是否是边框，默认不是               |
+| onChange                    | (value: string) => void               | 输入回调监听                   |
+| onInputEnd                  | (value: string) => void               | 输入结束                     |
+| showSoftKeyboard            | boolean                               | 默认是否弹起软键盘                |
+| startAndEndBorderHandle     | boolean                               | 是否首尾特殊处理,默认不需要           |
+| inputBoxBorderHandleRadius  | Length                                | 圆角                       |
 
 ## 咨询作者
 

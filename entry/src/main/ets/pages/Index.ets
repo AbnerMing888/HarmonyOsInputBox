@@ -135,6 +135,31 @@ struct Index {
         }
       }).margin({ top: 20 })
 
+      //取消间隙
+      InputBoxView({
+        inputBoxSize: 6,
+        caretColor: Color.Red,
+        inputBoxGap: 0,
+        inputBoxBgColor: Color.Transparent,
+        inputBoxBorderWidth: {
+          right: 0.5,
+          left: 1,
+          top: 1,
+          bottom: 1
+        },
+        isInputBoxBorder: true,
+        startAndEndBorderHandle: true, //首尾处理
+        inputBoxBorderHandleRadius: 10, //首尾显示的圆角度数
+        inputBoxNormalBorderColor: Color.Black,
+        inputBoxSelectBorderColor: Color.Black,
+        onChange: (value) => {
+          console.log("===输入监听：" + value)
+        },
+        onInputEnd: (value) => {
+          console.log("===输入结果：" + value)
+        }
+      }).margin({ top: 20 })
+
     }
     .height('100%')
     .width('100%')
