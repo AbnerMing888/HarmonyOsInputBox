@@ -32,7 +32,7 @@ ohpm install @abner/input_box
 方式二：在工程的oh-package.json5中设置三方包依赖，配置示例如下：
 
 ```
-"dependencies": { "@abner/input_box": "^1.0.1"}
+"dependencies": { "@abner/input_box": "^1.0.2"}
 ```
 
 ## 代码使用
@@ -218,9 +218,30 @@ InputBoxView({
 
 ```
 
+### 10、设置一键清空能力
+
+
+```typescript
+
+inputBoxControl:InputBoxControl=new InputBoxControl()
+
+InputBoxView({
+  inputBoxSize: 5,
+  inputBoxControl:this.inputBoxControl,
+  onChange: (value) => {
+    console.log("===输入监听：" + value)
+  },
+  onInputEnd: (value) => {
+    console.log("===输入结果：" + value)
+  }
+})
+  
+//清空
+this.inputBoxControl.clearInput()
+
+```
+
 ## 属性介绍
-
-
 
 | 属性                          | 类型                                    | 概述                       |
 |-----------------------------|---------------------------------------|--------------------------|
@@ -255,6 +276,7 @@ InputBoxView({
 | showSoftKeyboard            | boolean                               | 默认是否弹起软键盘                |
 | startAndEndBorderHandle     | boolean                               | 是否首尾特殊处理,默认不需要           |
 | inputBoxBorderHandleRadius  | Length                                | 圆角                       |
+| inputBoxControl            | InputBoxControl                       | 控制器，可以调用一键清空能力           |
 
 ## 咨询作者
 

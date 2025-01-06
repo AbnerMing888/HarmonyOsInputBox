@@ -109,7 +109,6 @@ struct Index {
         inputBoxBorderWidth: { bottom: 2 },
         inputBoxNormalBorderColor: Color.Black,
         inputBoxSelectBorderColor: Color.Black,
-
         onChange: (value) => {
           console.log("===输入监听：" + value)
         },
@@ -150,6 +149,24 @@ struct Index {
         isInputBoxBorder: true,
         startAndEndBorderHandle: true, //首尾处理
         inputBoxBorderHandleRadius: 10, //首尾显示的圆角度数
+        inputBoxNormalBorderColor: Color.Black,
+        inputBoxSelectBorderColor: Color.Black,
+        onChange: (value) => {
+          console.log("===输入监听：" + value)
+        },
+        onInputEnd: (value) => {
+          console.log("===输入结果：" + value)
+        }
+      }).margin({ top: 20 })
+
+      //设置边框下划线方式,设置格子宽度
+      InputBoxView({
+        inputBoxSize: 6,
+        inputBoxWidth: 24,
+        inputWidth: 184,
+        inputBoxGap: 8,
+        inputBoxBgColor: Color.Transparent,
+        inputBoxBorderWidth: { bottom: 2 },
         inputBoxNormalBorderColor: Color.Black,
         inputBoxSelectBorderColor: Color.Black,
         onChange: (value) => {
