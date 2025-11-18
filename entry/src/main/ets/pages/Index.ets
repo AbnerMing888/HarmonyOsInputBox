@@ -1,5 +1,4 @@
 import { InputBoxView, InputTextType } from '@abner/input_box'
-import router from '@ohos.router'
 
 @Entry
 @Component
@@ -183,10 +182,16 @@ struct Index {
 
         Button("自定义键盘")
           .onClick(() => {
-            router.pushUrl({ url: "pages/CustomKeyboardPage" })
+            this.getUIContext().getRouter().pushUrl({ url: "pages/CustomKeyboardPage" })
+          }).margin({ top: 20 })
+
+        Button("监听粘贴板")
+          .onClick(() => {
+            this.getUIContext().getRouter().pushUrl({ url: "pages/PastePage" })
           }).margin({ top: 20 })
       }
     }.height('100%')
     .width('100%')
+
   }
 }

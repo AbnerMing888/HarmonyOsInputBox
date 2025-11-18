@@ -4,11 +4,7 @@ InputBox是一个自动输入框，支持文本、密码等多种模式，支持
 
 ## 开发环境
 
-DevEco Studio NEXT Developer Beta1,Build Version: 5.0.3.900
-
-Api版本：**12**
-
-modelVersion：5.0.0
+Api版本：**>=12**
 
 ## 效果
 
@@ -32,7 +28,7 @@ ohpm install @abner/input_box
 方式二：在工程的oh-package.json5中设置三方包依赖，配置示例如下：
 
 ```
-"dependencies": { "@abner/input_box": "^1.0.3"}
+"dependencies": { "@abner/input_box": "^1.0.6"}
 ```
 
 ## 代码使用

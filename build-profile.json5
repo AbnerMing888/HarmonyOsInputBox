@@ -1,6 +1,19 @@
 {
   "app": {
     "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "C:\\Users\\GW00261583\\.ohos\\config\\default_InputBox_iIlFBr6zWMI_YyoHtolvOPtwJTG-PH98NBPTTXceXHU=.cer",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001BA4D162AED265CBD562D489B3C00238AE007A68704DCFC43053F36D3D1FA23D96A8C578AD19DD53",
+          "profile": "C:\\Users\\GW00261583\\.ohos\\config\\default_InputBox_iIlFBr6zWMI_YyoHtolvOPtwJTG-PH98NBPTTXceXHU=.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "C:\\Users\\GW00261583\\.ohos\\config\\default_InputBox_iIlFBr6zWMI_YyoHtolvOPtwJTG-PH98NBPTTXceXHU=.p12",
+          "storePassword": "0000001BE1B7969060368330F8E37CF6DEB1C818678CBADD83F843AC67C351E6164D732ABB74FA4372E040"
+        }
+      }
     ],
     "products": [
       {
@@ -37,6 +50,10 @@
           ]
         }
       ]
+    },
+    {
+      "name": "inputbox",
+      "srcPath": "./inputbox",
     }
   ]
 }

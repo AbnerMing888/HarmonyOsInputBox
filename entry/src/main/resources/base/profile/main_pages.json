@@ -1,6 +1,7 @@
 {
   "src": [
     "pages/Index",
-    "pages/CustomKeyboardPage"
+    "pages/CustomKeyboardPage",
+    "pages/PastePage"
   ]
 }

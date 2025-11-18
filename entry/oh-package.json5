@@ -6,7 +6,7 @@
   "author": "",
   "license": "",
   "dependencies": {
-    "@abner/input_box": "file:./libs/inputbox-1.0.3.har"
+    "@abner/input_box": "file:./libs/inputbox-signed-1.0.6.har"
   }
 }
 
