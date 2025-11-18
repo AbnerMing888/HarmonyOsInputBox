@@ -50,10 +50,6 @@
           ]
         }
       ]
-    },
-    {
-      "name": "inputbox",
-      "srcPath": "./inputbox",
     }
   ]
 }
